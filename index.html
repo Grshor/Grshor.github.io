@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikita Makarichev — Golang Developer</title>
+<meta name="description" content="Backend engineer (Go) — event-driven microservices for fintech and marketplaces. 5 years. Moscow / remote.">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e1e1e'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23f386a1' text-anchor='middle'%3ENM%3C/text%3E%3C/svg%3E">
+<script src="assets/vendor/htmx.min.js" defer></script>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="topbar__id" href="#top">NM — NIKITA MAKARICHEV</a>
+  <nav>
+    <a href="#experience">EXPERIENCE</a>
+    <a href="#systems">SYSTEMS</a>
+    <a href="#code">CODE</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+  <div class="topbar__status"><span class="dot"></span> OPEN&nbsp;TO&nbsp;WORK <span style="opacity:.5">v5.1</span></div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="sec sec--paper hero" id="top">
+  <span class="corner-mark corner-mark--tl">¬</span>
+  <span class="corner-mark corner-mark--tr">¬</span>
+  <h1 class="sr-only">Nikita Makarichev — Golang developer. Event-driven backends for money-critical systems.</h1>
+  <div class="hero__canvas-wrap" aria-hidden="true">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero__static-title" id="hero-static" hidden>Event-driven backends for money-critical systems</div>
+  </div>
+  <div class="hero__sub">
+    <span class="tag tag--ink">GOPHER · 5Y 1M</span>
+    <span class="tag">MOSCOW UTC+3</span>
+    <span class="tag">REMOTE OK</span>
+    <span class="tag">ENGLISH B2</span>
+    <span class="tag">FINTECH × 3</span>
+  </div>
+  <div class="win hero__terminal">
+    <div class="win__bar"><span class="dot"></span> nikita@career:~ <span class="grow"></span> zsh — 80×24</div>
+    <div class="win__body"><span class="ln-cmd">$ whoami</span>
+<span class="ln-out">nikita.makarichev — backend engineer (go)</span>
+<span class="ln-cmd">$ systemctl status career --no-pager</span>
+<span class="ln-out">● career.service — <span class="ln-hl">active (running)</span> since 2021-09</span>
+<span class="ln-out">   Peak ingest: <span id="stat-events">5,000</span> events/sec · <span id="stat-txn">10,000</span> txn/min</span>
+<span class="ln-out">   Domains: fintech ×3, marketplace · stack: go, kafka, postgres, k8s</span>
+<span class="ln-cmd">$ tail -f /var/log/contact.log</span>
+<span class="ln-out">thegrushor@gmail.com · t.me/Grushor · github.com/Grshor <span class="cursor"></span></span></div>
+  </div>
+</section>
+
+<!-- ================= MANIFESTO ================= -->
+<section class="sec sec--pink" id="manifesto">
+  <span class="corner-mark corner-mark--tl">-x</span>
+  <span class="corner-mark corner-mark--br">x-</span>
+  <div class="sec__head"><span class="chip">00.MANIFESTO</span><span class="idx">WHY THE PHONE STAYS QUIET AT 3AM</span></div>
+  <div class="manifesto__grid">
+    <h2 class="giant">Five years shipping systems that move money while people sleep</h2>
+    <div class="manifesto__aside">
+      <p>Backend engineer specialising in distributed, event-driven systems — commands and events in real time, eventual consistency done deliberately, not accidentally.</p>
+      <p>Fintech and marketplaces: banking event backbones, order pipelines, catalog trees with 40,000+ nodes. I design inter-service communication strategies, review code, and have led a backend team.</p>
+    </div>
+  </div>
+  <div class="win stats-window">
+    <div class="win__bar">PROD.METRICS <span class="grow"></span> measured, not vibes</div>
+    <table class="stats-table"><tbody>
+      <tr><td class="num">5,000/s</td><td class="bar-cell"><div class="minibar" style="width:88%"></div></td><td class="cap">peak event ingest — real-time microservices at Sber</td></tr>
+      <tr><td class="num">10,000+/min</td><td class="bar-cell"><div class="minibar" style="width:96%"></div></td><td class="cap">transactions through a banking event backbone at Black Wall Group</td></tr>
+      <tr><td class="num">40,000+</td><td class="bar-cell"><div class="minibar" style="width:70%"></div></td><td class="cap">categories in a tree catalog system at Kangaroo</td></tr>
+      <tr><td class="num">50+</td><td class="bar-cell"><div class="minibar" style="width:42%"></div></td><td class="cap">roles with granular API permissions in a banking RBAC</td></tr>
+    </tbody></table>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="sec sec--paper" id="experience">
+  <div class="sec__head"><span class="chip">01.EXPERIENCE.LOG</span><span class="idx">2021 → PRESENT</span></div>
+  <div class="jobs" hx-get="partials/experience.html" hx-trigger="revealed" hx-swap="innerHTML">
+    <div class="loading-block">loading experience.log …</div>
+  </div>
+</section>
+
+<!-- ================= SYSTEMS / SKILLS ================= -->
+<section class="sec sec--sage" id="systems">
+  <span class="corner-mark corner-mark--tl">¬</span>
+  <span class="corner-mark corner-mark--br">¬</span>
+  <div class="sec__head"><span class="chip">02.SKILLS.TBL</span><span class="idx">GROUPED, NOT A WORD CLOUD</span></div>
+  <div class="skills-grid" hx-get="partials/systems.html" hx-trigger="revealed" hx-swap="innerHTML">
+    <div class="loading-block">loading skills.tbl …</div>
+  </div>
+</section>
+
+<!-- ================= CODE / FAQ ================= -->
+<section class="sec sec--black" id="code">
+  <span class="corner-mark corner-mark--tl">-x</span>
+  <span class="corner-mark corner-mark--br">x-</span>
+  <div class="sec__head"><span class="chip">03.GITHUB.REMOTE</span><span class="idx">github.com/Grshor</span></div>
+  <ul class="repo-list" hx-get="partials/repos.html" hx-trigger="revealed" hx-swap="innerHTML">
+    <div class="loading-block" style="color:#8d8d8d">git clone in progress …</div>
+  </ul>
+  <p class="repos-note" id="repos-note">// curated snapshot · live star counts sync on load</p>
+
+  <div class="faq" hx-get="partials/faq.html" hx-trigger="revealed" hx-swap="innerHTML">
+    <div class="loading-block" style="color:#8d8d8d">loading faq …</div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec sec--paper contact" id="contact">
+  <div>
+    <div class="sec__head"><span class="chip">04.CONTACT.INI</span><span class="idx">RESPONSE LATENCY &lt; 24H</span></div>
+    <h2 class="giant" style="max-width:12ch">Let&rsquo;s build something that holds</h2>
+    <div class="contact__grid">
+      <a class="contact__card" href="mailto:thegrushor@gmail.com"><span class="k">EMAIL</span>thegrushor@gmail.com</a>
+      <a class="contact__card" href="https://t.me/Grushor" rel="noopener"><span class="k">TELEGRAM</span>t.me/Grushor</a>
+      <a class="contact__card" href="https://github.com/Grshor" rel="noopener"><span class="k">GITHUB</span>github.com/Grshor</a>
+      <a class="contact__card" href="tel:+79859775165"><span class="k">PHONE</span>+7 985 977-51-65</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>©2026 NIKITA MAKARICHEV</span>
+    <span>MADE IN MOSCOW. WITH GO.</span>
+    <span class="grow"></span>
+    <div class="glider-box">
+      <canvas id="glider" width="48" height="48"></canvas>
+      <span class="cap">GLIDER 1.1</span>
+    </div>
+    <div class="b64">VGFraWUgcGlza2kgZGVsYXQgc3BlY2lhbG5vIGRseWEgdGViZSwga3RvIGNoaXRhZXQgYmF5dDY0</div>
+    <span>NM.GO.5Y1</span>
+  </footer>
+</section>
+
+</body>
+</html>
