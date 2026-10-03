@@ -8,7 +8,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { height: 100%; overflow: hidden; background: #05070a; }
 body { font-family: 'JetBrains Mono', monospace; cursor: crosshair; }
-canvas { position: fixed; inset: 0; display: block; }
+canvas { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
 
 /* contact sigils (DOM so links stay real) */
 #contacts {
