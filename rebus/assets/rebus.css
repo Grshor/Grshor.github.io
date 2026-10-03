@@ -10,25 +10,6 @@ html, body { height: 100%; overflow: hidden; background: #05070a; }
 body { font-family: 'JetBrains Mono', monospace; cursor: crosshair; }
 canvas { position: fixed; inset: 0; display: block; }
 
-#hint {
-  position: fixed; z-index: 10; pointer-events: none;
-  color: #9ef7dd; font-size: 11px; letter-spacing: .18em; text-transform: lowercase;
-  opacity: 0; transition: opacity .18s;
-  text-shadow: 0 0 8px rgba(110,255,210,.5);
-}
-#hint.on { opacity: .9; }
-
-#toggle {
-  position: fixed; right: 18px; bottom: 16px; z-index: 10;
-  width: 40px; height: 40px; border-radius: 50%;
-  background: rgba(110,255,210,.06); color: #6fdcc0;
-  border: 1px solid rgba(110,255,210,.35);
-  font: 500 16px 'JetBrains Mono', monospace; cursor: pointer;
-  transition: background .15s, transform .15s;
-}
-#toggle:hover { background: rgba(110,255,210,.16); transform: scale(1.08); }
-#toggle.on { background: rgba(110,255,210,.25); color: #eafffa; }
-
 /* contact sigils (DOM so links stay real) */
 #contacts {
   position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%);
@@ -40,11 +21,6 @@ canvas { position: fixed; inset: 0; display: block; }
   color: #6fdcc0; transition: transform .18s, color .18s;
 }
 #contacts a:hover { transform: translateY(-6px) scale(1.12); color: #c8ffef; }
-#contacts a::after {
-  content: attr(data-w); position: absolute; left: 50%; bottom: -22px; transform: translateX(-50%);
-  font-size: 10px; letter-spacing: .22em; color: #9ef7dd; opacity: 0; transition: opacity .15s;
-}
-#contacts a:hover::after, body.labels #contacts a::after { opacity: .9; }
 #contacts svg { width: 100%; height: 100%; display: block; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
