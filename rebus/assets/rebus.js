@@ -380,6 +380,13 @@ function toggle() {
 }
 toggleBtn.addEventListener('click', toggle);
 
+// debug/test hook: ring rotates, tests need live coordinates
+window.__rebus = {
+  nodes: () => nodeRing(W / 2 + vx * 30, H / 2 + vy * 30),
+  hitTest,
+  scene: () => scene,
+};
+
 /* contact sigils */
 contactsEl.innerHTML = `
   <a href="mailto:thegrushor@gmail.com" data-w="email" aria-label="email" title="email">
