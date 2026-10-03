@@ -30,10 +30,11 @@ const V = [
   [PHI, 0, -1], [PHI, 0, 1], [-PHI, 0, -1], [-PHI, 0, 1],
 ].map(v => v.map(x => x / Math.hypot(1, PHI)));
 const E = [];
+const EDGE = 2 / Math.sqrt(1 + PHI * PHI); // edge length after vertex normalization
 for (let i = 0; i < 12; i++)
   for (let j = i + 1; j < 12; j++) {
     const d = Math.hypot(V[i][0] - V[j][0], V[i][1] - V[j][1], V[i][2] - V[j][2]);
-    if (Math.abs(d - 2 / PHI) < 0.1) E.push([i, j]);
+    if (Math.abs(d - EDGE) < 0.02) E.push([i, j]);
   }
 
 function rot(v, ry, rx) {
