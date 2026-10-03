@@ -307,7 +307,7 @@ document.querySelectorAll('.dlist .lrow').forEach(row => {
 let openMenu = null;
 function closeMenu() { openMenu?.remove(); openMenu = null;
   document.querySelectorAll('.menubar button.open').forEach(b => b.classList.remove('open')); }
-function showMenu(anchor, items) {
+function showMenu(anchor, items, upward = false) {
   closeMenu();
   const m = document.createElement('div');
   m.className = 'dropdown';
@@ -321,7 +321,8 @@ function showMenu(anchor, items) {
   document.body.appendChild(m);
   const r = anchor.getBoundingClientRect();
   m.style.left = r.left + 'px';
-  m.style.top = r.bottom + 'px';
+  if (upward) m.style.bottom = (innerHeight - r.top + 2) + 'px';
+  else m.style.top = r.bottom + 'px';
   openMenu = m;
   anchor.classList.add('open');
 }
@@ -364,7 +365,7 @@ start.addEventListener('click', e => {
     { label: 'Help ▸ faq.hlp', act: () => { const w = document.querySelector('.win[data-app="faq"]'); w.classList.remove('minimized'); activate(w); } },
     { sep: true },
     { label: 'Shut Down…', act: shutdown },
-  ]);
+  ], true);
 });
 function shutdown() {
   const win = document.createElement('div');
