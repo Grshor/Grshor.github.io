@@ -167,7 +167,7 @@ function drawOrbit(alpha) {
     const hot = hovered === n.id;
     const r = hot ? 13 : 9;
     drawNodeGlyph(n.glyph, n.x, n.y, r, hot);
-    if (hot || labels) word(n.x, n.y - r - 8, n.word, hot ? 'rgba(255,140,170,.95)' : 'rgba(158,247,221,.55)');
+    if (labels && !hot) word(n.x, n.y - r - 8, n.word, 'rgba(158,247,221,.55)');
   }
   ctx.globalAlpha = 1;
 }
@@ -182,13 +182,14 @@ function drawChronicle(a) {
   ctx.strokeStyle = INK + '0.55)'; ctx.lineWidth = 1;
   ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x1, y); ctx.stroke();
   const marks = [
-    { x: 0.02, d: '21', w: 'nifi · dashboards' },
-    { x: 0.36, d: '22', w: 'black wall · bank core' },
-    { x: 0.62, d: '24', w: 'kangaroo · lead' },
-    { x: 0.86, d: '25', w: 'sber · real-time' },
+    { d: '21', w: 'nifi · dashboards' },
+    { d: '22', w: 'black wall · bank core' },
+    { d: '24', w: 'kangaroo · lead' },
+    { d: '25', w: 'sber · real-time' },
   ];
-  for (const m of marks) {
-    const x = x0 + (x1 - x0) * (0.1 + m.x);
+  marks.forEach((m, idx) => {
+    const f = 0.06 + 0.88 * (idx / (marks.length - 1));
+    const x = x0 + (x1 - x0) * f;
     const hot = hovered === 'chronicle-' + m.d;
     ctx.strokeStyle = hot ? LIFE + '1)' : INK + '0.8)';
     ctx.beginPath(); ctx.arc(x, y, hot ? 9 : 5, 0, Math.PI * 2); ctx.stroke();
@@ -196,7 +197,7 @@ function drawChronicle(a) {
     ctx.font = '13px "JetBrains Mono", monospace'; ctx.textAlign = 'center';
     ctx.fillText(m.d, x, y - 16);
     if (hot || labels) word(x, y + 26, m.w);
-  }
+  });
   // "now" — live end
   const p = (t * 0.6) % 1;
   ctx.strokeStyle = LIFE + (1 - p) + ')';
